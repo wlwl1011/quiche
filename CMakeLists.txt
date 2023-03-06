@@ -2,7 +2,7 @@ CMAKE_MINIMUM_REQUIRED(VERSION 3.2)
 
 PROJECT(quiche)
 
-option(ENABLE_LINK_TCMALLOC "option for link tcmalloc" ON)
+#option(ENABLE_LINK_TCMALLOC "option for link tcmalloc" OFF)
 
 SET(CMAKE_CXX_FLAGS_DEBUG "$ENV{CXXFLAGS} -O0 -Wall -g2 -ggdb")
 SET(BUILD_SHARED_LIBS OFF)
@@ -424,11 +424,11 @@ TARGET_LINK_LIBRARIES(quiche
     ${Z}
 )
 
-if (ENABLE_LINK_TCMALLOC)
-    TARGET_LINK_LIBRARIES(quiche
-        libtcmalloc_minimal.a
-)
-endif()
+#if (ENABLE_LINK_TCMALLOC)
+#    TARGET_LINK_LIBRARIES(quiche
+#        libtcmalloc_minimal.a
+#)
+#endif()
 
 ### simple quic client
 SET(SIMPLE_QUIC_CLIENT_SRCS
