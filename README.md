@@ -85,9 +85,9 @@ cd -
 
 ```bash
 ./build/simple_quic_server \
-  --quic_response_cache_dir=/data/quic-root/ \
-  --certificate_file=/data/quic-cert/leaf_cert.pem \
-  --key_file=/data/quic-cert/leaf_cert.pkcs8
+  --quic_response_cache_dir=data/quic-root/ \
+  --certificate_file=data/quic-cert/leaf_cert.pem \
+  --key_file=data/quic-cert/leaf_cert.pkcs8
 ```
 
 - Request the file with quic client
